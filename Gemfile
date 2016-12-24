@@ -47,7 +47,7 @@ group :development do
 end
 
 group :production do
-  gem 'pg'
+  gem 'pg' #This is the postgres database for heroku production version of the app
   gem 'rails_12factor'
 end
 
