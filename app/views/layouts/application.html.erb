@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- Everything that we put in this file will be available in every page of the website -->
 <html>
 <head>
   <title>AlphaBlog</title>
@@ -7,8 +8,11 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+  <%flash.each do |name,msg|%>
+    <ul>
+      <li> <%= msg %> </li>
+    </ul>
+    <%end%>
+  <%= yield %>
 </body>
 </html>
