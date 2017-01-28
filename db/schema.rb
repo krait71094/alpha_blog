@@ -11,12 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-#To add the column to the table from the controller file,the user must use rake db:migrate line so that the column can be added to the table at the schema.rb file
-ActiveRecord::Schema.define(version: 20161225033459) do
+ActiveRecord::Schema.define(version: 20170128132841) do
 
   create_table "articles", force: :cascade do |t|
     t.string   "title"
     t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string   "username"
+    t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
