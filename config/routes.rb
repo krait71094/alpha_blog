@@ -3,9 +3,12 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
   
   root 'pages#home' # The root tag is to change the root page to the home page of the web application
-  get 'about', to:'pages#about'
+  get 'about', to: 'pages#about'
   
   resources :articles #Give a path that we want to use to all the related functions in articles
+  
+  get 'signup', to: 'users#new'
+  resource :users, except: [:new]
   
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
