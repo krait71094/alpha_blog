@@ -8,8 +8,7 @@ Rails.application.routes.draw do
   resources :articles #Give a path that we want to use to all the related functions in articles
   
   get 'signup', to: 'users#new'
-  resource :users, except: [:new]
-  
+  resources :users, except: [:new]
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
